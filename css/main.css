@@ -1,0 +1,1627 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   /********  BASE STYLES  ***********/
+   body{
+   	 margin: 0;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     color: #465165;
+   }
+
+   h2{
+     font-family: 'Oregano', cursive;
+     font-size: 1.5em;
+     color: #465165;
+     text-align: center;
+     text-transform: uppercase;
+   }
+
+   figure {
+     margin: 0;
+   }
+
+   a{
+     text-decoration: none;
+   }
+
+   ul{
+     list-style: none;
+   }
+
+   ul li{
+     display: inline-block;
+   }
+
+   /* NOTE: Draws two lines at the end of the headlines */
+   .lines {
+     line-height: 0.4;
+     text-align: center;
+   }
+
+   .lines span {
+     display: inline-block;
+     position: relative;
+   }
+
+   h2 span::after{
+     content: "";
+     position: absolute;
+     height: 4px;
+     border-bottom: 2px solid #4aa1bf;
+     border-top: 2px solid #465165;
+     top: 1;
+     width: 10px;
+     transform: skewY(-55deg);
+     left: 100%;
+   }
+
+   /* NOTE: /* Popup container for pin icon ************/
+   .popup {
+       position: relative;
+       display: inline-block;
+       cursor: pointer;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+   }
+
+   /* The actual popup */
+   .popup .popuptext{
+       visibility: hidden;
+       width: 80px;
+       background-color: #465165;
+       color: #fff;
+       font-size: 0.75em;
+       text-align: center;
+       border-radius: 6px;
+       padding: 7px 0;
+       position: absolute;
+       z-index: 1;
+       bottom: 110%;
+       left: 100%;
+       margin-left: -60px;
+   }
+
+   /* Popup arrow */
+   .popup .popuptext::after {
+       content: "";
+       position: absolute;
+       top: 98%;
+       left: 50%;
+       margin-left: -8px;
+       border-width: 8px;
+       border-style: solid;
+       border-color: #465165 transparent transparent transparent;
+   }
+
+   /* Toggle this class - hide and show the popup */
+   .popup .show {
+       visibility: visible;
+       -webkit-animation: fadeIn 1s;
+       animation: fadeIn 1s;
+   }
+
+   /* Add animation (fade in the popup) */
+   @-webkit-keyframes fadeIn {
+       from {opacity: 0;}
+       to {opacity: 1;}
+   }
+
+   @keyframes fadeIn {
+       from {opacity: 0;}
+       to {opacity:1 ;}
+   }
+
+   /****** HEADER SECTION ***********************************************/
+   header {
+     background: url('../img/hero-img.png') center no-repeat;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     -webkit-clip-path: polygon(50% 100%, 100% 95%, 100% 0, 0 0, 0 95%);
+     clip-path: polygon(50% 100%, 100% 95%, 100% 0, 0 0, 0 95%);
+     height: 80vw;
+     width: 100%;
+   }
+
+   /* Nav bar ********************************/
+   .header-navbar {
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     background-color: rgba(255,255,255,0.5);
+   }
+
+
+   /* Logo  ***************************/
+   .logo {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     width: 50%;
+  }
+
+   .logo img {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding: 6% 0 0 30%;
+     max-width: 12vw;
+     max-height: 10vw;
+   }
+
+   /* NOTE: Menu ********************************/
+   .menu {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     width: 50%;
+   }
+
+   /* NOTE: Menu icon: three bars that turns to an X onclick */
+   #menu-icon {
+       display: inline-block;
+       cursor: pointer;
+   }
+
+   .bar1, .bar2, .bar3 {
+       width: 25px;
+       height: 3px;
+       background-color: #4aa1bf;
+       margin: 4px 15px 0 0;
+       transition: 0.4s;
+   }
+
+   /* Rotate first bar */
+   .change .bar1 {
+       background-color: #465165;
+       -webkit-transform: rotate(-45deg) translate(-6px, 6px) ;
+       transform: rotate(-45deg) translate(-6px, 6px) ;
+   }
+
+   /* Fade out the second bar */
+   .change .bar2 {
+       opacity: 0;
+   }
+
+   /* Rotate last bar */
+   .change .bar3 {
+       background-color: #465165;
+       -webkit-transform: rotate(45deg) translate(-4px, -4px) ;
+       transform: rotate(45deg) translate(-4px, -4px) ;
+   }
+
+   /* NOTE: Dropdown content **********************************/
+   .navbar-content {
+       display: none;
+       position: relative;
+       background-color: #f1f1f1;
+       width: 100%;
+       overflow: auto;
+       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   }
+
+   .navbar-content a {
+       color:  #465165;
+       padding: 12px 16px;
+       font-size: 0.65em;
+       display: block;
+       text-transform: uppercase;
+       text-align: center;
+   }
+
+   .navbar-content a:hover {
+     background-color: #ddd
+   }
+
+   /* .navbar-content a.active {
+     background-color: rgba(74,161,191,0.5);
+     color: #363636;
+    } */
+
+   .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+   }
+
+   /* .sticky + main {
+     padding-top: 10px;
+   } */
+
+   .show {
+     display: block;
+   }
+
+   /* NOTE: ABOUT_SECTION ***********************/
+   main{
+     margin-top: -13%;
+     width: 100%;
+   }
+
+   #about{
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     background-color: #e5ebee;
+     -webkit-clip-path: polygon(50% 7%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+     clip-path: polygon(50% 7%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+     width: 100%;
+     height: auto;
+  }
+
+   .about-headline{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 60px;
+     margin-bottom: 20px;
+     width: 100%;
+   }
+
+   .about-headline h2{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+   }
+
+   .about-img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+   }
+
+   .about-img img{
+     width: 48vw;
+     height: 48vw;
+   }
+
+   .about-intro{
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+     padding: 0 5% 15% 5%;
+   }
+
+   .about-intro p{
+     font-size: 0.75em;
+     line-height: 1.8em;
+     text-align: center;
+   }
+
+   .interwebs {
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+   }
+
+   .interwebs i, .popup i{
+     color: #4aa1bf;
+     font-size: 1.5em;
+     text-align: center;
+     padding: 0 11px;
+   }
+
+   .popup i{
+     font-size: 1.8em;
+   }
+
+   /* NOTE: SKILLS-SECTION ****************************************************/
+   #skills{
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: space-around;
+     align-items: center;
+     width: 100%;
+     height: auto;
+     padding-bottom: 10%;
+   }
+
+   .skills-headline{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 12%;
+     margin-bottom: 30px;
+     width: 100%;
+   }
+
+   .skills-headline h2{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+   }
+
+   .skill-one, .skill-two, .skill-three, .skill-fourth {
+     display: flex;
+     -webkit-flex-flow: row nowrap;
+     flex-flow: row nowrap;
+     justify-content: center;
+     align-items: center;
+     height: 145px;
+     box-shadow: 2px 2px 3px rgba(0,0,0,0.24), 2px 3px 3px rgba(0,0,0,0.24);
+     margin: 4% 6%;
+   }
+
+   #skills p {
+     font-size: 0.75em;
+     line-height: 1.5em;
+     color: white;
+     width: 50%;
+     margin-top: 3%;
+   }
+
+   /* NOTE: skill-one ***************/
+   .skill-one {
+     background-color: #9ba9bb;
+   }
+
+   .skill-one img, .skill-two img {
+     max-width: 45%;
+     max-height: 40%;
+     padding: 0 25px;
+   }
+
+   /* NOTE: skill-two **************/
+   .skill-two {
+     background-color: #47a1bf;
+   }
+
+   /* NOTE: skill-three ************/
+   .skill-three {
+     background-color: #475165;
+   }
+
+   /* NOTE: skill-fourth ************/
+   .skill-fourth {
+     background-color: #466b8b;
+   }
+
+   .skill-three img, .skill-fourth img {
+     max-width: 40%;
+     max-height: 43%;
+     padding: 0 25px 0 40px;
+   }
+
+   /* NOTE: WORK SECTION ****************************************************/
+   #work{
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     background-color: #e5ebee;
+     -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+     clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+     width: 100%;
+     height: auto;
+     padding-bottom: 30%;
+   }
+
+   #work i {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 20%;
+     padding: 0 2%;
+   }
+
+   .work-headline{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 18%;
+     margin-bottom: 30px;
+     width: 100%;
+   }
+
+   .work-headline h2{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+   }
+
+   .work-content {
+     display: flex;
+     -webkit-flex-flow: row nowrap;
+     flex-flow: row nowrap;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+   }
+
+   .project-one, .project-two, .project-three {
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .link-page{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+   }
+
+   .link-page img{
+     max-width: 70%;
+   }
+
+   #ja-logo{
+     max-width: 35%;
+   }
+
+   #unpg-logo{
+     max-width: 40%;
+     max-height: 30%;
+   }
+
+   .link-page a{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     text-decoration: none; /* No underlines on the link */
+     z-index: 10; /* Places the link above everything else in the div */
+     background-color: #FFF; /* Fix to make div clickable in IE */
+     opacity: 0; /* Fix to make div clickable in IE */
+     filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+   }
+
+   .description {
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+   }
+
+   .description span{
+     color: #475165;
+     font-family: 'Kaushan Script', cursive;
+     font-size: 1.2em;
+     text-decoration: underline;
+     text-decoration-color: #47a1bf;
+   }
+
+   .description p{
+     font-size: 0.8em;
+     line-height: 1.75em;
+     text-align: center;
+   }
+
+  /******* CONTACT SECTION **************************************************/
+
+  #contact{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/desk.png') center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+    margin-top: -20%;
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-headline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18%;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .contact-headline h2 {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .contact-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-img a{
+    text-decoration: none;
+    color: #47a1bf;
+    font-size: 1em;
+  }
+
+  .contact-img img{
+    max-width: 15%;
+    max-height: 15%;
+  }
+
+  /* CONTACT FORM ***************************************/
+  form {
+    width: 100%;
+    padding-bottom: 15%;
+  }
+
+  .contact-form {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Form layout */
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* input textfields and textarea styles ************/
+  input[type=text], textarea{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #47a1bf;
+    color: white;
+    word-spacing: 2px;
+    outline: 0;
+    width: 85%;
+  }
+
+  @-webkit-keyframes autofill {
+      to {
+          color: white;
+          background: transparent;
+      }
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  /* Send button style ************/
+  #button{
+    margin-top: 8%;
+    width: 100%;
+  }
+
+  input[type=submit]{
+    background-color: transparent;
+    border: 4px double #47a1bf;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    padding: 12px 20px;
+  }
+
+  input[type=submit]:hover{
+    background-color: #47a1bf;
+    color: #363636;
+    font-weight: 600;
+  }
+
+  /* Labels and textarea layout ************/
+  label{
+    display: block;
+    padding-top: 50px;
+    padding-left: 45px;
+    word-spacing: 2px;
+    width: 100%;
+  }
+
+  textarea{
+    height: 80px;
+    resize: none;
+  }
+
+  /* Labels style */
+  .label-text, .label-textarea{
+    color: white;
+    cursor: text;
+    font-size: 13px;
+    line-height: 9px;
+    transition: all 0.3s; /* NOTE: smooth the label transition from one state to another */
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  /* The label looks like a standard text placeholder.
+  But when focus shifts to the input field, the text moves above it and acts as a label.*/
+  .label-text{
+    transform: translateY(-18px); /* NOTE: move the position of the text vertically */
+  }
+
+  .label-textarea{
+    transform: translateY(-80px);
+  }
+
+  /* The font size will change from large placeholder text to small label text
+  when the input and the textarea have focus. */
+  /* The adjacent sibling combinator (+) separates two selectors and matches the
+  second element only if it immediately follows the first element, and both are children
+  of the same parent */
+  input:focus + .label-text{
+    color: #47a1bf;
+    font-size: 11px;
+    transform: translateY(-45px);
+  }
+
+  /* By placing the 'required' attribute in the input tag, the ‘:valid’ pseudo class
+  can evaluate if a value exists in the text field, if so, it will appear valid and a different
+  styling can be triggered*/
+  input:valid + .label-text{
+    color: #47a1bf;
+    font-size: 11px;
+    transform: translateY(-45px);
+  }
+
+  input:-moz-ui-invalid + .label-text{
+    box-shadow: none;
+  }
+
+  input[type=text]:-moz-ui-invalid{
+    box-shadow: none;
+     /* border-bottom: 3px solid #db594b; */
+  }
+
+  textarea:focus + .label-textarea{
+    color: #47a1bf;
+    font-size: 11px;
+    transform: translateY(-103px);
+  }
+
+  textarea:valid + .label-textarea{
+    color: #47a1bf;
+    font-size: 11px;
+    transform: translateY(-103px);
+  }
+
+  textarea:-moz-ui-invalid + .label-textarea{
+    box-shadow: none;
+    /* color: #db594b;
+    font-size: 11px;
+    transform: translateY(-103px); */
+  }
+
+  textarea:-moz-ui-invalid{
+    box-shadow: none;
+    /* border-bottom: 3px solid #db594b; */
+  }
+
+  /* Style for error messages ***************/
+  #form-messages{
+    width: 80%;
+    height: 50%;
+    margin-left: 10px;
+    padding: 8px 0;
+  }
+
+  .success {
+    font-size: 0.8em;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  .error {
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 1em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #b94a48;
+    background-color: #f2dede;
+    border: 1px solid rgba(185, 74, 72, 0.3);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+/* copy-right section */
+  .copy-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+  .copy-right span {
+    clear: both;
+    color: gray;
+    font-size: 0.75em;
+  }
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+   /*Mobile styles here *******************************************************/
+   @media screen and (max-width: 240px) {
+     /* NOTE: About section */
+     main{
+       margin-top: -18%;
+     }
+
+    .about-img img{
+      width: 60vw;
+      height: 60vw;
+    }
+
+    .about-intro {
+      padding: 0 5% 20% 5%;
+    }
+
+    .interwebs i, .popup i{
+      font-size: 1em;
+      padding: 0 7px;
+    }
+
+    .popup i{
+      font-size: 1.2em;
+    }
+
+    /* NOTE: Skills section */
+    .skill-one, .skill-two, .skill-three, .skill-fourth {
+      flex-flow: row wrap;
+      height: 230px;
+      margin: 4% 12%;
+    }
+
+    .skill-one img, .skill-two img {
+      max-width: 40%;
+      max-height: 37%;
+      padding: 8px 12px 0 12px;
+    }
+
+    .skill-three img, .skill-fourth img {
+      max-width: 38%;
+      max-height: 40%;
+      padding: 15px 15px 0 20px;
+    }
+
+    .skill-three img{
+      padding-top: 8px;
+    }
+
+    #skills p {
+      font-size: 0.6em;
+      width: 80%;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    /* NOTE: Work section */
+    .work-headline{
+      padding-top: 25%;
+    }
+
+    .link-page img{
+      max-width: 95%;
+      max-height: 95%;
+    }
+
+    #ja-logo{
+      max-width: 35%;
+    }
+
+    /* NOTE: Contact section */
+    .contact-img a{
+      font-size: 0.8em;
+    }
+
+    .contact-img img{
+      max-width: 12%;
+      max-height: 12%;
+    }
+
+    #form-messages {
+      width: 75%;
+      height: 45%;
+      margin-left: 5px;
+      padding-top: 3px;
+    }
+
+    .success, .error {
+      font-size: 0.6em;
+    }
+
+   }
+
+   /*Tablet styles here ***********************************/
+   @media screen and (min-width: 480px) {
+    /* NOTE: About section */
+    @-moz-document url-prefix() {
+     #about {
+       padding-bottom: 40px;
+     }
+   }
+
+    .about-headline{
+      padding-top: 80px;
+    }
+
+    .about-headline h2, .skills-headline h2,
+    .work-headline h2, .contact-headline h2 {
+      font-size: 1.8em;
+    }
+
+    .about-img img{
+      width: 48%;
+      height: 48%;
+    }
+
+    /* NOTE: Skills section */
+     .skill-one, .skill-two, .skill-three, .skill-fourth {
+       margin: 4% 20%;
+     }
+
+     @-moz-document url-prefix() {
+      .skills-headline {
+        padding-top: 40px;
+      }
+      .skill-one, .skill-two, .skill-three {
+        margin-bottom: 20px;
+      }
+    }
+
+     #skills p {
+       font-size: 0.7em;
+     }
+
+     /* NOTE: Work section */
+     .work-headline{
+       padding-top: 15%;
+       margin-bottom: 50px;
+     }
+
+     @-moz-document url-prefix() {
+      .work-headline {
+       padding-top: 90px;
+      }
+    }
+
+     /* NOTE: Contact section */
+     #contact{
+       margin-top: -25%;
+     }
+
+     @-moz-document url-prefix() {
+      .contact-headline {
+       padding-top: 100px;
+      }
+
+      form {
+        padding-bottom: 100px;
+      }
+    }
+
+     .contact-img img{
+       max-width: 10%;
+       max-height: 10%;
+     }
+
+     #form-messages {
+       width: 70%;
+       height: 75%;
+       margin-left: 5px;
+       padding-top: 3px 0;
+     }
+
+     .success, .error {
+       font-size: 0.6em;
+     }
+   }
+
+   @media screen and (min-width: 768px) {
+   /* NOTE: Basic styles */
+   .about-headline h2, .skills-headline h2,
+   .work-headline h2, .contact-headline h2 {
+     font-size: 2em;
+   }
+
+   /* NOTE: Header section */
+   .menu {
+       display: none;
+   }
+
+   .logo{
+     width: 40%;
+   }
+
+   .navbar-content {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     background-color: transparent;
+     box-shadow: none;
+     width: 60%;
+   }
+
+   .navbar-content a {
+     padding: 25px;
+     font-size: 1em;
+   }
+
+   /* NOTE: About section */
+   .about-headline{
+     padding-top: 18%;
+     margin-bottom: 40px;
+   }
+
+   @-moz-document url-prefix() {
+    #about {
+      padding-bottom: 40px;
+    }
+
+    .about-headline {
+     padding-top: 150px;
+    }
+  }
+
+   .about-img img{
+     width: 34%;
+     height: 34%;
+   }
+
+   .about-intro p{
+     font-size: 0.95em;
+   }
+
+   .interwebs i, .popup i{
+     font-size: 1.8em;
+     padding: 0 18px;
+   }
+
+   .popup i{
+     font-size: 1.9em;
+   }
+
+   .popup .popuptext{
+     padding: 7px 10px;
+     margin-left: -77px;
+   }
+
+   /* NOTE: Skills section */
+   #skills{
+     flex-flow: row column;
+     justify-content: center;
+   }
+
+   #skills p {
+     font-size: 0.85em;
+     width: 72%;
+     text-align: center;
+     margin-top: 0;
+   }
+
+   .skills-headline{
+     padding-top: 75px;
+   }
+
+   .skill-one, .skill-two, .skill-three, .skill-fourth {
+     flex-flow: row wrap;
+     width: 30%;
+     height: 320px;
+     margin: 4% 2%;
+   }
+
+   @-moz-document url-prefix() {
+    .skill-one, .skill-two{
+      margin-bottom: 20px;
+    }
+  }
+
+   .skill-one img, .skill-two img {
+     max-width: 40%;
+     max-height: 35%;
+     padding: 0 25px 0 25px;
+   }
+
+   .skill-three img, .skill-fourth img {
+     max-width: 37%;
+     max-height: 40%;
+   }
+
+   .skill-one img {
+     padding-top: 20px;
+   }
+
+   .skill-two img {
+     padding-top: 22px;
+   }
+
+   .skill-three img {
+     padding: 15px 15px 0 26px;
+   }
+
+   .skill-fourth img {
+     padding: 20px 25px 0 25px;
+   }
+
+/* NOTE: Work section */
+   .work-headline{
+     padding-top: 18%;
+   }
+
+   @-moz-document url-prefix() {
+    .work-headline {
+     padding-top: 190px;
+    }
+  }
+
+  .link-page img{
+    max-width: 55%;
+  }
+
+  #ja-logo{
+    max-width: 25%;
+  }
+
+  .description span{
+     font-size: 1.3em;
+    }
+
+   .description p{
+     font-size: 1em;
+   }
+
+/* NOTE: Contact section */
+   #contact{
+     margin-top: -20%;
+   }
+
+   .contact-headline{
+     padding-top: 18%;
+   }
+
+   @-moz-document url-prefix() {
+    .contact-headline {
+     padding-top: 150px;
+    }
+
+    form {
+      padding-bottom: 100px;
+    }
+  }
+
+   .contact-img img{
+     max-width: 5%;
+     max-height: 5%;
+   }
+
+   .row {
+     margin: 0 0 0 10%;
+     width: 90%;
+   }
+
+   #button {
+     width: 80%;
+   }
+
+   #form-messages {
+     width: 60%;
+     height: 45%;
+     margin-left: 10px;
+     padding: 5px 2px;
+   }
+
+   .success, .error {
+     font-size: 0.75em;
+   }
+
+}
+
+   /*Desktop styles here*/
+   @media screen and (min-width: 940px) {
+   /* NOTE: Header */
+   header {
+     height: 65vw;
+   }
+
+   .logo img {
+     max-width: 8vw;
+     max-height: 6vw;
+   }
+
+   /* NOTE: About section */
+   main{
+     margin-top: -9%;
+   }
+
+   #about {
+     padding-bottom: 15%;
+   }
+
+   .about-headline{
+     padding-top: 15%;
+     margin-bottom: 40px;
+     width: 100%;
+   }
+
+   @-moz-document url-prefix() {
+    .about-headline {
+     padding-top: 150px;
+    }
+  }
+
+   .about-img{
+     width: 30%;
+   }
+
+   .about-img img{
+     width: 17.5vw;
+     height: 17.5vw;
+   }
+
+   .about-intro {
+     margin-left: -5%;
+     padding: 0;
+     width: 40%;
+   }
+
+   .about-intro p{
+     font-size: 0.87em;
+     text-align: left;
+   }
+
+   .interwebs {
+     margin-left: -5%;
+     justify-content: flex-start;
+   }
+
+   .interwebs i, .popup i{
+     font-size: 0.5em;
+     padding: 0 15px;
+   }
+
+   .popup .popuptext{
+     margin-left: -73px;
+   }
+
+   /* NOTE: Skills section */
+   .skills-headline{
+     padding-top: 10%;
+     margin-bottom: 60px;
+   }
+
+   @-moz-document url-prefix() {
+    .skills-headline {
+     padding-top: 100px;
+    }
+  }
+
+   .skill-one, .skill-two, .skill-three, .skill-fourth {
+     width: 19%;
+     height: 360px;
+     margin: 1%;
+   }
+
+   .skill-one img {
+     max-width: 38%;
+     max-height: 35%;
+     padding: 18px 25px 0 25px;
+   }
+
+   .skill-two img {
+     max-width: 38%;
+     max-height: 37%;
+     padding: 18px 25px 0 25px;
+   }
+
+   .skill-three img, .skill-fourth img {
+     max-width: 34%;
+     max-height: 87%;
+   }
+
+   .skill-fourth img {
+     padding-top: 22px;
+   }
+
+   #skills p {
+     font-size: 0.9em;
+     width: 80%;
+     /* text-align: right; */
+     margin-top: 0;
+   }
+
+   /* NOTE: Work section */
+    @-moz-document url-prefix() {
+    .work-headline {
+     padding-top: 190px;
+    }
+   }
+
+   .project-one, .project-two {
+     justify-content: space-between;
+     align-items: center;
+     width: 60%;
+   }
+
+   .link-page img{
+     max-width: 48%;
+   }
+
+   #ja-logo{
+     max-width: 20%;
+   }
+
+   /* NOTE: Contact section */
+   .contact-headline {
+    padding-top: 15%;
+   }
+
+   @-moz-document url-prefix() {
+    .contact-headline {
+     padding-top: 150px;
+    }
+
+    form {
+      padding-bottom: 100px;
+    }
+   }
+
+   .contact-img img{
+     max-width: 4%;
+     max-height: 4%;
+   }
+
+   .contact-form {
+     justify-content: space-between;
+     width: 70%;
+   }
+
+   .copy-right {
+     justify-content: center;
+     align-items: flex-end;
+     width: 100%;
+   }
+
+   #form-messages {
+     width: 60%;
+     height: 45%;
+     margin-left: 150px;
+     padding-top: 10px;
+   }
+
+   .success, .error {
+     font-size: 1em;
+   }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

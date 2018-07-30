@@ -1,0 +1,231 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<!-- NOTE:Page's head that contains the title and links to
+  css files and fonts  -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Francia Vasquez | Web Developer</title>
+        <link rel="shortcut icon" type="img/png" href="img/fv-icon.png"/>
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- NOTE: Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
+        <!-- NOTE: Stylesheets -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fontawesome-all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/popup.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="navbar" class="header-navbar">
+          <div class="logo">
+            <a href="https://franvasquez.com">
+            <img src="img/fv-logo.png" alt="logo"/></a>
+          </div>
+          <div class="menu">
+            <div id="menu-icon" onclick="myMenu()" class="dropdown">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+          </div>
+          <div id="show-nav" class="navbar-content">
+              <a class="active" href="#about">About</a>
+              <a href="#work">Work</a>
+              <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <script src="js/menu.js"></script>
+        <header>
+
+        </header>
+        <main>
+          <!-- NOTE: About section has three divs: headline, image, and intro -->
+        <section id="about">
+            <div class="about-headline">
+              <h2 class="lines">A bit about me<span></span></h2>
+            </div>
+            <figure class="about-img">
+              <img src="img/fv-photo.png" alt="Contact image"/>
+            </figure>
+            <div class="about-intro">
+              <p>I'm from Colombia and home based in New Jersey. My journey into web development started
+                with a degree in computer science. Logical thinking, attention to detail, and organization
+                are my skill set to write clean and neat code. Besides coding, I'm an enthusiastic about art,
+                meditation, photography & traveling.
+              </p>
+              <div class="interwebs">
+                <a href="https://www.linkedin.com/in/francia-vasquez" target="_blank">
+                   <i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.pinterest.com/frhevadi/" target="_blank">
+                  <i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.instagram.com/frhevadi/?hl=en" target="_blank">
+                  <i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/frhevadi" target="_blank">
+                  <i class="fab fa-github-alt"></i></a>
+                <a href="https://unsplash.com/@frhevadi" target="_blank">
+                  <i class="fas fa-camera"></i></a>
+                <p class="popup" onclick="myPopup()">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span id="myPopup" class="popuptext">coming soon!</span>
+                </p>
+              </div>
+            </div>
+        </section>
+        <!-- NOTE: Skills section has three divs: headline, skill-one, skill-two, skill-three -->
+        <section id="skills">
+            <div class="skills-headline">
+              <h2 class="lines">What I do<span></span></h2>
+            </div>
+            <article class="skill-one">
+              <img src="img/html-icon.png" alt="html icon"/>
+              <p>Clean and well-formatted hand-coded HTML to ensure
+               that the content is readable, accessible, and easy
+               to trouble-shoot.</p>
+            </article>
+            <article class="skill-two">
+              <img src="img/css-icon.png" alt="css icon"/>
+              <p>Best current practices are applied to develop a lean
+               and well-organized CSS code that is fast to load and easy
+               to read & build on.</p>
+            </article>
+            <article class="skill-three">
+              <img src="img/psd-icon.png" alt="psd icon"/>
+              <p>Ease converting a PSD file to a HTML/CSS file that renders
+                a webpage that is pixel-perfect match.</p>
+            </article>
+            <article class="skill-fourth">
+              <img src="img/responsive.png" alt="responsive design icon"/>
+              <p>Mobile First and Responsive Web Design by implementing
+                 Fluid Layouts, Responsive Typography, Flexbox & Media Queries.
+              </p>
+            </article>
+          </section>
+          <!-- NOTE: Work section has a full-width div that contains two half-width divs -->
+          <section id="work">
+            <div class="work-headline">
+              <h2 class="lines">What I've done<span></span></h2>
+            </div>
+            <div class="work-content">
+                <i class="fas fa-chevron-left" onclick="plusDivs(-1)"></i>
+                <div class="mySlides project-one">
+                  <figure class="link-page">
+                    <img src="img/rogue-pickings.png" alt="Rogue Pickings logo"/>
+                    <a href="https://www.franvasquez.com/roguepickings/index.html" target="_blank"></a>
+                  </figure>
+                  <div class="description">
+                    <p>The <a href="https://www.franvasquez.com/roguepickings/home.html" target="_blank">
+                      <span>Rogue Pickings</span></a> ' project consisted in building a web presence
+                      that promotes its roaming food truck services. The current HTML5/CSS3 's practices
+                      were applied to develop a lean and responsive website.
+                    </p>
+                  </div>
+                </div>
+                <div class="mySlides project-two">
+                    <figure class="link-page">
+                      <img id="ja-logo" src="img/jubilee-austen.png" alt="jubilee austen logo"/>
+                      <a href="https://www.franvasquez.com/jubilee/index.html" target="_blank"></a>
+                    </figure>
+                    <div class="description">
+                      <p>The <a href="https://www.franvasquez.com/jubilee/index.html" target="_blank">
+                        <span>Jubilee Austen Portfolio</span></a> 's project consisted in building a web presence
+                        where Jubilee showcases her skills and projects as web designer & developer. The current
+                        HTML5/CSS3 's practices were applied to develop a lean and responsive website.
+                      </p>
+                    </div>
+                </div>
+                <div class="mySlides project-three">
+                    <figure class="link-page">
+                      <img id="unpg-logo" src="img/logo-unplugged.png" alt="unplugged logo"/>
+                      <a href="https://www.franvasquez.com/unplugged/index.html" target="_blank"></a>
+                    </figure>
+                    <div class="description">
+                      <p>The <a href="https://www.franvasquez.com/unplugged/index.html" target="_blank">
+                        <span>Unplugged</span></a> 's project consisted in building a web presence
+                        for music publication that covers all the latest news in the world of indie rock. The current
+                        HTML5/CSS3 's practices were applied to develop a lean and responsive website.
+                      </p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right" onclick="plusDivs(1)"></i>
+                <script src="js/slideshow.js"></script>
+            </div>
+          </section>
+          <!-- NOTE: Footer section has a full-width div that contains two sixth-width divs -->
+          <footer id="contact">
+            <div class="contact-headline">
+              <h2>Get in touch !</h2>
+            </div>
+            <figure class="contact-img">
+              <img src="img/paper-plane.png" alt="airplane image"/>
+              <a href="mailto:hola@franvasquez.com">hola@franvasquez.com</a>
+            </figure>
+            <div class="contact-form">
+              <div id="form-messages"></div>
+              <form id="ajax-contact" method="post" action="mailer.php">
+                <div class="row">
+                  <label>
+                    <input type="text" id="name" name="name" required/>
+                    <div class="label-text">your name</div>
+                  </label>
+                </div>
+                <div class="row">
+                  <label>
+                    <input type="text" id="email" name="email" required/>
+                    <div class="label-text">your email</div>
+                  </label>
+                </div>
+                <div class="row">
+                  <label>
+                    <textarea name="message" required></textarea>
+                    <div class="label-textarea">drop some words</div>
+                  </label>
+                </div>
+                <div id="button" class="row">
+                  <input type="submit" id="submit" value="send">
+                </div>
+              </form>
+              <div class="copy-right">
+                <span>&copy;Francia Vasquez 2018</span>
+              </div>
+            </div>
+          </footer>
+        </main>
+
+
+
+
+
+
+
+
+
+        <!-- Scripts  ----------------------------------------------------------------------------------------------------------->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
